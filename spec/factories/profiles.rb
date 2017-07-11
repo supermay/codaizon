@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :profile do
-    user nil
+    user        { build(:user)}
     first_name "MyString"
     last_name "MyString"
     address "MyString"

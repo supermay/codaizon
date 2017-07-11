@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :order do
-    cart nil
-    product nil
-    quantity 1
+    cart          { build(:cart) }
+    product       { build(:product) }
+    quantity       1
   end
 end
