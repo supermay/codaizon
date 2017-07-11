@@ -75,3 +75,9 @@ last_name:"May",
 address:"London",
 telephone:"06-88855522",
 user: user3)
+
+
+
+cart1 = Cart.create!(
+total_
+)
