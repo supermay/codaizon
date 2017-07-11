@@ -6,5 +6,4 @@ class User < ApplicationRecord
 
   has_one :profile
   has_one :cart
-  has_many :selected_products, through: :cart, source: :product
 end
