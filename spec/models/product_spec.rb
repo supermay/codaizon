@@ -1,5 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "Association with buyers through carts"  do
+
+
+    let!(:buyer_user) { create :user, email: "chuday@gmail.com" }
+    let!(:product) { create :product }
+    let!(:cart) { create :cart, products: product }
+
+    it "has buyers" do
+      expect(:cart.user).to include(buyer_user)
+    end
+  end
 end
