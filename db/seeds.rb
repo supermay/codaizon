@@ -1,15 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-
-
-
-
+Profile.delete_all
+Order.delete_all
+Cart.delete_all
+User.delete_all
+Product.delete_all
 
 user1 = User.create!(email:"user1@gmail.com", password:"123456")
 user2 = User.create!(email:"user2@gmail.com", password:"123456")
@@ -19,39 +12,39 @@ product1 = Product.create!(name:"Cool T-shirt",
 price:10,
 remote_image_url:"http://res.cloudinary.com/supermay/image/upload/v1499774762/8_smoesc.jpg",
 description:"")
-product1 = Product.create!(name:"Not Cool T-shirt",
+product2 = Product.create!(name:"Not Cool T-shirt",
 price:10,
 remote_image_url:"http://res.cloudinary.com/supermay/image/upload/v1499774762/7_uhhat8.jpg",
 description:"")
-product1 = Product.create!(name:"Very Cool T-shirt",
+product3 = Product.create!(name:"Very Cool T-shirt",
 price:10,
 remote_image_url:"http://res.cloudinary.com/supermay/image/upload/v1499774762/6_z6ahwb.jpg",
 description:"")
-product1 = Product.create!(name:"Hot T-shirt",
+product4 = Product.create!(name:"Hot T-shirt",
 price:20,
 remote_image_url:"http://res.cloudinary.com/supermay/image/upload/v1499774762/9_fhjxwh.jpg",
 description:"")
-product1 = Product.create!(name:"Very Hot T-shirt",
+product5 = Product.create!(name:"Very Hot T-shirt",
 price:100,
 remote_image_url:"http://res.cloudinary.com/supermay/image/upload/v1499774761/5_htgye1.jpg",
 description:"")
-product1 = Product.create!(name:"Freezing T-shirt",
+product6 = Product.create!(name:"Freezing T-shirt",
 price:50,
 remote_image_url:"http://res.cloudinary.com/supermay/image/upload/v1499774761/4_cx9x6m.jpg",
 description:"")
-product1 = Product.create!(name:"Coding T-shirt",
+product7 = Product.create!(name:"Coding T-shirt",
 price:10,
 remote_image_url:"http://res.cloudinary.com/supermay/image/upload/v1499774761/3_kg8vic.jpg",
 description:"")
-product1 = Product.create!(name:"Beer T-shirt",
+product8 = Product.create!(name:"Beer T-shirt",
 price:25,
 remote_image_url:"http://res.cloudinary.com/supermay/image/upload/v1499774761/2_xxfttr.png",
 description:"")
-product1 = Product.create!(name:"Coffe T-shirt",
+product9 = Product.create!(name:"Coffe T-shirt",
 price:100,
 remote_image_url:"http://res.cloudinary.com/supermay/image/upload/v1499774761/2_fq2nh0.jpg",
 description:"")
-product1 = Product.create!(name:"Style T-shirt",
+product10 = Product.create!(name:"Style T-shirt",
 price:82,
 remote_image_url:"http://res.cloudinary.com/supermay/image/upload/v1499774761/1_nhqhra.jpg",
 description:"")
@@ -78,6 +71,29 @@ user: user3)
 
 
 
-cart1 = Cart.create!(
-total_
+cart1 = Cart.create!(user: user1)
+cart2 = Cart.create!(user: user2)
+cart3 = Cart.create!(user: user3)
+
+
+
+
+order1 = Order.create!(
+cart: cart1,
+product: product9,
+quantity: 1
+)
+
+
+order1 = Order.create!(
+cart: cart2,
+product: product8,
+quantity: 2
+)
+
+
+order1 = Order.create!(
+cart: cart3,
+product: product6,
+quantity: 3
 )
