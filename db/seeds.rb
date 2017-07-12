@@ -48,7 +48,7 @@ product10 = Product.create!(name:"Style T-shirt",
 price:82,
 remote_image_url:"http://res.cloudinary.com/supermay/image/upload/v1499774761/1_nhqhra.jpg",
 description:"")
-product1 = Product.create!(name:"Rails T-shirt",
+product11 = Product.create!(name:"Rails T-shirt",
 price:60,
 remote_image_url:"http://res.cloudinary.com/supermay/image/upload/v1499774762/10_e2fg9b.jpg",
 description:"")
