@@ -4,8 +4,8 @@ class CartsController < ApplicationController
 
   def create
     @cart = current_user.carts.create(cart_params)
-
   end
+
   private
 
   def cart_params
