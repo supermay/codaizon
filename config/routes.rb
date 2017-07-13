@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :profile, only: [:new, :create, :edit, :update]
+  resources :profiles, only: [:new, :create, :edit, :update]
   resources :products
   resources :cart
 

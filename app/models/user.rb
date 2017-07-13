@@ -6,4 +6,12 @@ class User < ApplicationRecord
 
   has_one :profile
   has_one :cart
+
+  def has_profile?
+    profile.present? && profile.persisted?
+  end
+
+  def full_name
+    profile.full_name
+  end
 end

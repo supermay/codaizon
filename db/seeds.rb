@@ -53,21 +53,6 @@ price:60,
 remote_image_url:"http://res.cloudinary.com/supermay/image/upload/v1499774762/10_e2fg9b.jpg",
 description:"")
 
-profile1 = Profile.create!(first_name:"Sam",
-last_name:"Sam",
-address:"London",
-telephone:"06-12345678",
-user: user1)
-profile1 = Profile.create!(first_name:"Ismail",
-last_name:"Ismail",
-address:"Den Bosch",
-telephone:"06-65412387",
-user: user2)
-profile1 = Profile.create!(first_name:"Terasa",
-last_name:"May",
-address:"London",
-telephone:"06-88855522",
-user: user3)
 
 
 
